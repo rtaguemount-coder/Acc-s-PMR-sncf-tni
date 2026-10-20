@@ -1,0 +1,6 @@
+{
+  "name": "Être retrouvé en gare : faciliter le transport des PMR",
+  "description": "Article et plateforme d'accessibilité PMR en gare : synergie Cloud & Edge, parcours de la donnée et accompagnement personnalisé SNCF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #F7F8FA;
+    --surface: #FFFFFF;
+    --ink: #14202B;
+    --muted: #4A5B6B;
+    --line: #3C5468;
+    --border: #C5D0DB;
+    --accent: #1F4E8C;
+    --accent-soft: #E6EEF9;
+    --accent-dark: #12325E;
+    --phone: #EAEEF3;
+    --cloud: #E2ECFB;
+    --edge: #E3F2E8;
+    --edge-ink: #1F6B43;
+    --warn: #C77700;
+    --warn-soft: #FFF7E8;
+    --warn-ink: #8A5200;
+    --radius: 14px;
+    --font-scale: 1;
+  }
+
+  .dark {
+    --bg: #0F1720;
+    --surface: #16212C;
+    --ink: #E8EEF4;
+    --muted: #A9B7C4;
+    --line: #8FA5B8;
+    --border: #2F4152;
+    --accent: #7DB2F0;
+    --accent-soft: #18283A;
+    --accent-dark: #9BCAFF;
+    --phone: #1A2531;
+    --cloud: #17283F;
+    --edge: #15291E;
+    --edge-ink: #7FD3A2;
+    --warn: #E5A33A;
+    --warn-soft: #2D2414;
+    --warn-ink: #F0B960;
+  }
+
+  .high-contrast {
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --ink: #000000;
+    --muted: #111111;
+    --line: #000000;
+    --border: #000000;
+    --accent: #003399;
+    --accent-soft: #E0E8FF;
+    --phone: #EFEFEF;
+    --cloud: #E0ECFF;
+    --edge: #D6F5E3;
+    --edge-ink: #004D20;
+    --warn: #804000;
+    --warn-soft: #FFF0D4;
+    --warn-ink: #4D2600;
+  }
+
+  .dark.high-contrast {
+    --bg: #000000;
+    --surface: #0A0A0A;
+    --ink: #FFFFFF;
+    --muted: #E0E0E0;
+    --line: #FFFFFF;
+    --border: #FFFFFF;
+    --accent: #80BFFF;
+    --accent-soft: #002244;
+    --phone: #1A1A1A;
+    --cloud: #001B3A;
+    --edge: #002B14;
+    --edge-ink: #80FFB3;
+    --warn: #FFB347;
+    --warn-soft: #331A00;
+    --warn-ink: #FFD480;
+  }
+
+  html {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--bg);
+    color: var(--ink);
+  }
+
+  .dyslexic-font {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', 'Verdana', sans-serif !important;
+    letter-spacing: 0.04em !important;
+    word-spacing: 0.1em !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Accessibility skip link */
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    z-index: 100;
+    font-weight: 600;
+    transition: top 0.2s ease-in-out;
+  }
+  .skip-link:focus {
+    top: 1rem;
+    outline: 3px solid var(--warn);
+    outline-offset: 2px;
+  }
+
+  /* Focus visible states */
+  *:focus-visible {
+    outline: 3px solid var(--warn);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
